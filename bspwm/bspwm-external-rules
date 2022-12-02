@@ -1,0 +1,27 @@
+#!/bin/bash
+
+wid=$1
+class=$2
+instance=$3
+consequences=$4
+# which xprop > /dev/null
+# if [ $? -eq 0 ];then
+#   instance=$(xprop -id $wid | grep 'WM_CLASS(STRING) = ' | head -n 1 | awk '{print $3}' | cut -c 2- | sed 's/.$//' | sed 's/.$//' )
+#   class=$(xprop -id $wid | grep 'WM_CLASS(STRING) = ' | head -n 1 | awk '{print $4}' | cut -c 2- | sed 's/.$//' )
+# fi
+#
+# echo "$class" >> out.txt
+case "$class" in
+discord)
+	echo "desktop='IV' follow=on"
+	;;
+Screenkey)
+	echo "manage=off"
+	;;
+spotify)
+	echo "desktop='V' state=tiled"
+	;;
+Zathura)
+	echo "state=tiled"
+	;;
+esac

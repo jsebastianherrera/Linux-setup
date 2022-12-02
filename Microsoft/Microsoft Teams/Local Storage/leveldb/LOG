@@ -1,0 +1,8 @@
+2022/11/03-10:09:20.299 12bb Reusing MANIFEST /home/shg/.config/Microsoft/Microsoft Teams/Local Storage/leveldb/MANIFEST-000001
+2022/11/03-10:09:20.302 12bb Recovering log #219
+2022/11/03-10:09:20.330 12bb Level-0 table #223: started
+2022/11/03-10:09:20.360 12bb Level-0 table #223: 481259 bytes OK
+2022/11/03-10:09:20.375 12bb Delete type=0 #219
+2022/11/03-10:09:36.278 1431 Level-0 table #226: started
+2022/11/03-10:09:36.286 1431 Level-0 table #226: 203227 bytes OK
+2022/11/03-10:09:36.289 1431 Delete type=0 #224

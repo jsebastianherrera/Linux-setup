@@ -1,0 +1,98 @@
+[bar/mainbar]
+monitor = "eDP-1"
+background = #414244
+foreground = #f8f8f2
+font-0 = MesloLGS NF:size=12;2
+height = 25
+width = 100%
+line-size = 2
+wm-restack = bspwm
+modules-left = bspwm vpn 
+modules-center = datetime 
+modules-right =  ethernet network bluetooth battery 
+radius = 5
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state>
+label-focused-background = #F79824
+label-focused-foreground = #414244
+label-focused = %index%
+label-occupied = %index%
+label-occupied-foreground = #F5D425
+label-empty = %index%
+label-focused-padding =1
+label-occupied-padding = 1
+label-empty-padding = 1
+
+[module/bluetooth]
+label = %output%
+label-padding = 1
+label-background= #ffffff
+interval = 1
+type = custom/script
+exec = $HOME/.config/polybar/scripts/bluetooth/bluetooth.sh 
+click-left = $HOME/.config/polybar/scripts/bluetooth/bluetooth_left_click.sh
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP0
+format-charging = <ramp-capacity>
+format-discharging = <ramp-capacity>
+format-full = <ramp-capacity>
+format-full-padding = 1
+format-full-background= #F79824
+format-full-foreground = #414244
+format-charging-padding = 1
+format-discharging-padding = 1
+format-discharging-background = #F79824
+format-discharging-foreground = #414244
+format-charging-background = #F79824
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+padding-right = 5
+
+[module/ethernet]
+label = %output% 
+label-padding = 1
+label-background= #ffffff
+type = custom/script 
+exec = $HOME/.config/polybar/scripts/ethernet/ethernet.sh
+
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+label-connected = "" 
+label-disconnected =  "睊"
+label-disconnected-background = #F79824 
+label-disconnected-foreground = #414244
+label-connected-background = #F79824 
+label-connected-foreground = #414244 
+label-disconnected-padding = 1 
+label-connected-padding = 1 
+
+[module/datetime]
+fixed-center = true
+type = internal/date
+date = %b %d | %H:%M:%S    
+
+[module/vpn]
+type = custom/script 
+exec = $HOME/.config/polybar/scripts/vpn/vpn.sh
+interval = 1
+label = %output% 
+label-padding = 1 
+label-background= #ffffff
+
+[module/docker]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/docker/docker.sh
+interval = 1
+label =  %output%
+label-padding = 1
+label-background= #F79824

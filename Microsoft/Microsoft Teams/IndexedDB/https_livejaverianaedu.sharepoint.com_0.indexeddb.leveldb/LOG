@@ -1,0 +1,15 @@
+2022/10/29-10:14:04.755 4e18 Reusing MANIFEST /home/shg/.config/Microsoft/Microsoft Teams/IndexedDB/https_livejaverianaedu.sharepoint.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/29-10:14:04.756 4e18 Recovering log #10
+2022/10/29-10:14:04.756 4e18 Reusing old log /home/shg/.config/Microsoft/Microsoft Teams/IndexedDB/https_livejaverianaedu.sharepoint.com_0.indexeddb.leveldb/000010.log 
+2022/10/29-10:44:30.666 a9e7 Level-0 table #15: started
+2022/10/29-10:44:30.672 a9e7 Level-0 table #15: 11168 bytes OK
+2022/10/29-10:44:30.674 a9e7 Delete type=0 #10
+2022/10/29-10:44:30.674 a9e7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2022/10/29-10:44:30.674 a9e7 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01%\x04\x02\x01\x17\x00s\x00t\x00s\x00-\x00p\x00a\x00g\x00e\x00-\x00r\x00e\x00s\x00p\x00o\x00n\x00s\x00e\x00-\x00c\x00a\x00c\x00h\x00e\x03\x00\x00\x00\x00\x00\x00\x1c@\x00\x01.\x00_\x00o\x00d\x00s\x00p\x00c\x00a\x00c\x00h\x00e\x00_\x00%\x002\x00F\x00_\x00l\x00a\x00y\x00o\x00u\x00t\x00s\x00%\x002\x00F\x001\x005\x00%\x002\x00F\x00f\x00i\x00l\x00e\x00b\x00r\x00o\x00w\x00s\x00e\x00r\x00.\x00a\x00s\x00p\x00x' @ 28121 : 1
+2022/10/29-10:44:30.674 a9e7 Compacting 1@1 + 1@2 files
+2022/10/29-10:44:30.685 a9e7 Generated table #16@1: 2954 keys, 525267 bytes
+2022/10/29-10:44:30.685 a9e7 Compacted 1@1 + 1@2 files => 525267 bytes
+2022/10/29-10:44:30.689 a9e7 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/10/29-10:44:30.689 a9e7 Delete type=2 #15
+2022/10/29-10:44:30.689 a9e7 Delete type=2 #12
+2022/10/29-10:44:30.689 a9e7 Manual compaction at level-1 from '\x00\x01\x01%\x04\x02\x01\x17\x00s\x00t\x00s\x00-\x00p\x00a\x00g\x00e\x00-\x00r\x00e\x00s\x00p\x00o\x00n\x00s\x00e\x00-\x00c\x00a\x00c\x00h\x00e\x03\x00\x00\x00\x00\x00\x00\x1c@\x00\x01.\x00_\x00o\x00d\x00s\x00p\x00c\x00a\x00c\x00h\x00e\x00_\x00%\x002\x00F\x00_\x00l\x00a\x00y\x00o\x00u\x00t\x00s\x00%\x002\x00F\x001\x005\x00%\x002\x00F\x00f\x00i\x00l\x00e\x00b\x00r\x00o\x00w\x00s\x00e\x00r\x00.\x00a\x00s\x00p\x00x' @ 28121 : 1 .. (end); will stop at (end)

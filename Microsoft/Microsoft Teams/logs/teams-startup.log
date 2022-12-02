@@ -1,0 +1,9 @@
+Error while parsing hooks JSON. Error: ENOENT: no such file or directory, open '/home/shg/.config/Microsoft/Microsoft Teams/hooks.json'
+(node:4569) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(node:4569) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 ecsSettingsUpdated listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+(node:4569) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 appInitialized listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+[4569:1103/100939.389698:FATAL:gpu_data_manager_impl_private.cc(442)] GPU process isn't usable. Goodbye.
+/dev/fd/3: No such file or directory
+Server response: 
+/dev/fd/3: No such file or directory
+Server response: 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectTreeState projectID="zadKWcGD.AACAQhh" projectPath="/home/shg/Desktop/FlowFree/model/AG.vpp">
+	<TreeState name="ModelRepository" viewX="0" viewY="0">
+		<SelectedPath>ModelRepository</SelectedPath>
+	</TreeState>
+	<TreeState name="DiagramNavigator" viewX="0" viewY="0">
+		<ExpandedPath>DiagramNavigator</ExpandedPath>
+		<ExpandedPath>DiagramNavigator,UML Diagrams</ExpandedPath>
+		<ExpandedPath>InteractionDiagram</ExpandedPath>
+		<SelectedPath>InteractionDiagram,j3RmBcGD.AACAQ1M</SelectedPath>
+	</TreeState>
+	<TreeState name="ClassBrowser" viewX="0" viewY="0"/>
+	<TreeState name="LogicalView" viewX="0" viewY="0"/>
+	<TreeState name="DiagramBacklog" viewX="0" viewY="0"/>
+</ProjectTreeState>

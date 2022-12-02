@@ -1,0 +1,5 @@
+2022/10/14-14:35:25.034 22ac Reusing MANIFEST /home/shg/.config/Microsoft/Microsoft Teams/IndexedDB/https_usc-powerpoint.officeapps.live.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/10/14-14:35:27.053 23a9 Level-0 table #5: started
+2022/10/14-14:35:27.058 23a9 Level-0 table #5: 856 bytes OK
+2022/10/14-14:35:27.068 23a9 Delete type=0 #3
+2022/10/14-14:35:27.068 23a9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
