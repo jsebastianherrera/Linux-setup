@@ -1,3 +1,14 @@
+VirtualBox/
+VisualParadigm/
+ibus/
+libreoffice/
+menus/
+virtscreen/
+vscode-sqltools/
+wireshark/
+.gsd*
+monitors.xml~
+user*
 arduino-ide/
 autostart/
 cef_user_data/
