@@ -9,8 +9,17 @@ line-size = 2
 wm-restack = bspwm
 modules-left = bspwm vpn 
 modules-center = datetime 
-modules-right =  ethernet network bluetooth battery 
+modules-right =  memory ethernet network bluetooth battery 
 radius = 5
+
+[module/memory]
+type = internal/memory
+interval = 3
+label = %percentage_used%%
+label-padding = 1
+label-background = #F79824
+label-foreground = #414244
+warn-percentage = 95
 
 [module/bspwm]
 type = internal/bspwm
