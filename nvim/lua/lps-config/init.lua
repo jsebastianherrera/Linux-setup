@@ -39,7 +39,7 @@ lspconfig.sumneko_lua.setup({
 --C++
 lspconfig.clangd.setup({
   on_attach = on_attach,
-  filetypes = { "c", "cpp", "h", "hxx", "cxx" },
+  -- filetypes = { "c", "cpp", "h", "hxx", "cxx" },
 })
 lspconfig.emmet_ls.setup({
   -- on_attach = on_attach,

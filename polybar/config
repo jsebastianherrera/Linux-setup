@@ -10,7 +10,6 @@ wm-restack = bspwm
 modules-left = bspwm vpn 
 modules-center = datetime 
 modules-right =  memory ethernet network bluetooth battery 
-radius = 5
 
 [module/memory]
 type = internal/memory
