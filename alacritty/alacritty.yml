@@ -11,7 +11,7 @@ window:
 font:
   normal:
     family: MesloLGS NF
-  size: 11.0
+  size: 14.0
 
 import:
   - /home/shg/.config/alacritty/dracula.yml
@@ -74,3 +74,4 @@ colors:
     cyan: '#a4ffff'
     white: '#ffffff'
 theme: Dracula
+

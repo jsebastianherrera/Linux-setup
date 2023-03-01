@@ -1,7 +1,9 @@
 #!/bin/bash
-con=$(ip addr | grep tun0 | grep inet | awk {'print $2'})
-if [ ${#con} -gt 0 ]; then
-	echo "%{F#414244} ${con}"
+lines=$(ip addr show | grep tun0 | wc -l)
+if [ ${lines} -gt 0 ]; then
+	tun0=$(ip addr show | grep tun0 | tail -n 1 | awk {'print $2'})
+	echo "%{F#e53935}%{F#ffffff} ${tun0}"
 else
-	echo "%{F#414244} Disconnected"
+  echo "%{F#e53935}%{F#ffffff} Disconnected"
+
 fi

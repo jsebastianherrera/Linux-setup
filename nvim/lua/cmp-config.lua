@@ -16,8 +16,8 @@ cmp.setup({
   -- Style formatting with lspkind
   formatting = { mode = 'symbol', format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }) },
   window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),

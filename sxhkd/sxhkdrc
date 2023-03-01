@@ -17,8 +17,11 @@ super + shift + s
 super + @Print
 	import -window `xwininfo | grep 'Window id:' | cut -d" " -f4` screenshot.jpg
 #sound
-XF86Audio{Raise,Lower}Volume
-	amixer -D pulse sset Master {5%+,5%-} unmute
+XF86AudioRaiseVolume
+	amixer sset 'Master' 5%+
+XF86AudioLowerVolume
+  amixer sset 'Master' 5%-
+
 # terminal emulator
 super + Return
 	alacritty	

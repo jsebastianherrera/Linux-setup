@@ -1,6 +1,7 @@
-wc=$(docker ps | wc -l)
-if [ $wc -gt 1 ]; then
-  echo "%{F#ffffff}"
-else 
-  echo "%{F#414244}"
+#!/bin/bash
+status=$(systemctl status docker | grep active | awk '{print $2}')
+if [ $status = 'inactive' ]; then
+	echo "%{F#ffffff}"
+else
+  echo "%{F#e53935}"
 fi

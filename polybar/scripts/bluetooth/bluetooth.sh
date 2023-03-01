@@ -20,8 +20,8 @@ then
       # bluetoothctl connect $i > /dev/null 
       echo "%{F#F79824}"
     else
-      echo "%{F#414244}"
+      echo "%{F#ffffffff}"
     fi
 else 
-  echo "%{F#414244}"
+  echo "%{F#ffffffff}"
 fi

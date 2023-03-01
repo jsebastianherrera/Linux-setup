@@ -1,6 +1,6 @@
+---@diagnostic disable: undefined-global
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lspconfig = require("lspconfig")
-local util = require("vim.lsp.util")
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("nvim-lsp-installer").setup({
   automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
@@ -33,13 +33,12 @@ lspconfig.bashls.setup({
   on_attach = on_attach,
 })
 --Lua
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
   on_attach = on_attach,
 })
 --C++
 lspconfig.clangd.setup({
   on_attach = on_attach,
-  -- filetypes = { "c", "cpp", "h", "hxx", "cxx" },
 })
 lspconfig.emmet_ls.setup({
   -- on_attach = on_attach,
@@ -57,6 +56,18 @@ lspconfig.emmet_ls.setup({
 lspconfig.texlab.setup({
   on_attach = on_attach,
 })
-lspconfig.omnisharp.setup({
+lspconfig.emmet_ls.setup({
+  on_attach = on_attach,
+})
+lspconfig.yamlls.setup({
+  on_attach = on_attach,
+})
+lspconfig.lemminx.setup({
+  on_attach = on_attach,
+})
+lspconfig.jdtls.setup({
+  on_attach = on_attach,
+})
+lspconfig.dartls.setup({
   on_attach = on_attach,
 })

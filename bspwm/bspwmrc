@@ -1,35 +1,24 @@
-#! /bin/sh
-
-#set ipad config
-# xrandr --newmode "1368x1024"  115.50  1368 1448 1592 1816  1024 1027 1037 1063 -hsync +vsync
-# xrandr --addmode HDMI-1 1368x1024
-# xrandr --output HDMI-1 --mode 1368x1024 --right-of eDP-1
-# Turn off bluetooth
-# bluetoothctl power off
-#Disable touchscreen and pencil
-res="$(xinput --list | grep 'Touchscreen' | awk '{print $5}' | cut -c 4-)"
-for i in $res
+#!/usr/bin/sh
+#Disable touchscreen
+id=$(xinput list  | grep 'Touchscreen' | awk '{print $5}' | cut -b 4-6)
+for i in ${id[@]};
 do
   xinput disable $i
 done
-
-pgrep -x sxhkd > /dev/null || sxhkd &
-bspc monitor eDP-1 -d I II III IV V #VI VII VIII IX X 
-# bspc monitor HDMI-1 -d VIII IX X
-bspc config external_rules_command "$HOME/.config/bspwm/bspwm-external-rules"
-#----------------------------------------
+sxhkd &
+#-----------------------------------
+bspc monitor -d I II III IV V
+#-----------------------------------
 bspc config pointer_modifier mod1
-bspc config border_width         0
-bspc config window_gap          5
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
-#----------------------------------------
-#---------------------------------------
+bspc config border_width 2
+bspc config window_gap 2
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+#-----------------------------------
+bspc config external_rules_command "$HOME/.config/bspwm/bspwm-external-rules"
+bspc config pointer_follows_focus true 
 feh --bg-fill $HOME/Pictures/wallpaper.jpg
 xsetroot -cursor_name left_ptr &
-bspc config focus_follows_pointer true
-picom --experimental-backends &
-xsetroot -cursor_name left_ptr &
-wmname LG3D & 
 $HOME/.config/polybar/launch.sh &
+picom &

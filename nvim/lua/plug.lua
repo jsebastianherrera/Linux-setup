@@ -21,13 +21,21 @@ return require("packer").startup(function()
     requires = { "nvim-lua/plenary.nvim" },
     config = "require('rest-config')",
   })
+  use({
+    'akinsho/flutter-tools.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+    config = "require('flutter-config')"
+  })
   -- Bufferline
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons',
     config = "require('bufferline-config')" }
   -- Commenter
-  use({ "terrortylor/nvim-comment", config = function()
-    require('nvim_comment').setup({ create_mappings = false })
-  end })
+  use({
+    "terrortylor/nvim-comment",
+    config = function()
+      require('nvim_comment').setup({ create_mappings = false })
+    end
+  })
   -- [[ useins Go Here ]]
   use({
     "iamcco/markdown-preview.nvim",
@@ -52,11 +60,14 @@ return require("packer").startup(function()
   -- lsp
   use("neovim/nvim-lspconfig")
   -- null-ls
-  use({ 'jose-elias-alvarez/null-ls.nvim',
+  use({
+    'jose-elias-alvarez/null-ls.nvim',
     config = "require('null-ls-config')",
   })
-  use({ 'MunifTanjim/prettier.nvim',
-    config = 'require("prettier-config")' })
+  use({
+    'MunifTanjim/prettier.nvim',
+    config = 'require("prettier-config")'
+  })
   use({
     "williamboman/nvim-lsp-installer",
     config = "require('lps-config')",
@@ -97,24 +108,6 @@ return require("packer").startup(function()
   })
   -- RAINBOW
   use({ "p00f/nvim-ts-rainbow", config = "require('rainbow-config')" })
-  -- Auto save
-  -- use({ "Pocco81/AutoSave.nvim", config = "require('autosave-config')" })
   -- Blank lines
   use({ "lukas-reineke/indent-blankline.nvim", config = "require('blankline-config')" })
-  -- UI useins
-  -- Latex
-  use({ "xuhdev/vim-latex-live-preview" })
-  -- -- -- Github copilot
-  -- use({
-  --   "zbirenbaum/copilot.lua",
-  --   config = function()
-  --     require("copilot").setup()
-  --   end,
-  -- })
-  -- use({
-  --   "zbirenbaum/copilot-cmp",
-  --   config = function()
-  --     require("copilot_cmp").setup()
-  --   end
-  -- })
 end)
