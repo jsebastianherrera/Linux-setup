@@ -74,16 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ["beacon.nvim"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/beacon.nvim",
-    url = "https://github.com/DanilaMihailov/beacon.nvim"
-  },
   ["bracey.vim"] = {
     loaded = true,
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/bracey.vim",
@@ -95,47 +85,15 @@ _G.packer_plugins = {
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  ["cmp-buffer"] = {
+  ["coc.nvim"] = {
     loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
-  ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
-  ["flutter-tools.nvim"] = {
-    config = { "require('flutter-config')" },
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
-    url = "https://github.com/akinsho/flutter-tools.nvim"
+    path = "/home/honey/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
   },
   gruvbox = {
     loaded = true,
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
-  },
-  ["hop.nvim"] = {
-    config = { "require('hop-config')" },
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/hop.nvim",
-    url = "https://github.com/phaazon/hop.nvim"
   },
   ["indent-blankline.nvim"] = {
     config = { "require('blankline-config')" },
@@ -143,27 +101,11 @@ _G.packer_plugins = {
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lspkind.nvim"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
-  },
   ["lualine.nvim"] = {
     config = { "require('lualine-config')" },
     loaded = true,
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
-  },
-  ["null-ls.nvim"] = {
-    config = { "require('null-ls-config')" },
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -171,27 +113,11 @@ _G.packer_plugins = {
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-cmp"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/nvim-cmp",
-    url = "https://github.com/hrsh7th/nvim-cmp"
-  },
   ["nvim-comment"] = {
     config = { "\27LJ\2\nR\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\20create_mappings\1\nsetup\17nvim_comment\frequire\0" },
     loaded = true,
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
-  },
-  ["nvim-lsp-installer"] = {
-    config = { "require('lps-config')" },
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     config = { "require('nerdtree-config')" },
@@ -226,18 +152,6 @@ _G.packer_plugins = {
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["prettier.nvim"] = {
-    config = { 'require("prettier-config")' },
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
-  },
-  ["rest.nvim"] = {
-    config = { "require('rest-config')" },
-    loaded = true,
-    path = "/home/honey/.local/share/nvim/site/pack/packer/start/rest.nvim",
-    url = "https://github.com/NTBBloodbath/rest.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/honey/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -246,62 +160,38 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('nerdtree-config')
-time([[Config for nvim-tree.lua]], false)
--- Config for: prettier.nvim
-time([[Config for prettier.nvim]], true)
-require("prettier-config")
-time([[Config for prettier.nvim]], false)
--- Config for: hop.nvim
-time([[Config for hop.nvim]], true)
-require('hop-config')
-time([[Config for hop.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require('treesitter-config')
-time([[Config for nvim-treesitter]], false)
--- Config for: rest.nvim
-time([[Config for rest.nvim]], true)
-require('rest-config')
-time([[Config for rest.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require('blankline-config')
-time([[Config for indent-blankline.nvim]], false)
 -- Config for: nvim-ts-rainbow
 time([[Config for nvim-ts-rainbow]], true)
 require('rainbow-config')
 time([[Config for nvim-ts-rainbow]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('nerdtree-config')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require('treesitter-config')
+time([[Config for nvim-treesitter]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 require('bufferline-config')
 time([[Config for bufferline.nvim]], false)
--- Config for: nvim-lsp-installer
-time([[Config for nvim-lsp-installer]], true)
-require('lps-config')
-time([[Config for nvim-lsp-installer]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('lualine-config')
-time([[Config for lualine.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
--- Config for: flutter-tools.nvim
-time([[Config for flutter-tools.nvim]], true)
-require('flutter-config')
-time([[Config for flutter-tools.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require('blankline-config')
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 try_loadstring("\27LJ\2\nR\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\20create_mappings\1\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
 time([[Config for nvim-comment]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require('null-ls-config')
-time([[Config for null-ls.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('lualine-config')
+time([[Config for lualine.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

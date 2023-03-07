@@ -1,7 +1,7 @@
 #!/bin/bash
 function paired_devices() {
   output="$(bluetoothctl paired-devices | awk '{print $2}')"
-  echo ${output[@]}
+  echo "${output[@]}"
 }
 
 function already_connected(){
@@ -14,9 +14,9 @@ function already_connected(){
 }
 
 output="$(bluetoothctl show | grep 'Powered' | awk '{print $2}')"
-if [ $output = 'yes' ];
+if [ "${output}" = 'yes' ];
 then
-    if [ $(already_connected) = true ];then
+    if [ "$(already_connected)" = true ];then
       # bluetoothctl connect $i > /dev/null 
       echo "%{F#F79824}"
     else

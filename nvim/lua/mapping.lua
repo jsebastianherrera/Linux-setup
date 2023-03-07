@@ -33,20 +33,12 @@ map("n", "<A-S-LEFT>", "5<C-w><", { noremap = true, silent = true })
 map("n", "<A-S-UP>", "5<C-w>+", { noremap = true, silent = true })
 map("n", "<A-S-DOWN>", "5<C-w>-", { noremap = true, silent = true })
 -- LSP REFERENCE
-map("n", "<space>f", "<cmd>lua vim.lsp.buf.format({async = true})<CR>", { noremap = true, silent = true })
-map("n", "gr", ":lua vim.lsp.buf.references() <CR>", { noremap = true, silent = true })
-map("n", "gd", ":lua vim.lsp.buf.definition() <CR>", { noremap = true, silent = true })
-map("n", "ca", ":lua vim.lsp.buf.code_action() <CR>", { noremap = true, silent = true })
-map("n", "K", ":lua vim.lsp.buf.hover() <CR>", { noremap = true, silent = true })
-map("n", "<leader>rn", ":lua vim.lsp.buf.rename() <CR>", { noremap = true, silent = true })
+map("n", "<space>f", "<Plug>(coc-format-selected)<CR>", { noremap = true, silent = true })
+map("n", "gr", "<Plug>(coc-references)<CR>", { noremap = true, silent = true })
+map("n", "gd", "<Plug>(coc-definition)<CR>", { noremap = true, silent = true })
+map("n", "ca", "<Plug>(coc-codeaction-selected)<CR>", { noremap = true, silent = true })
+map("n", "qf", "<Plug>(coc-fix-current)<CR>", { noremap = true, silent = true })
+map("n", "<leader>rn", "<Plug>(coc-rename)<CR>", { noremap = true, silent = true })
 -- Commenter
 map("n", "<leader>cc", ":CommentToggle <CR>", { noremap = true, silent = true })
 map("n", "<leader>cv", ":'<,'>CommentToggle <CR>", { noremap = true, silent = true })
--- Line management
-map("n", "<leader>lb", "0", { noremap = true, silent = true })
-map("n", "<leader>le", "$", { noremap = true, silent = true })
--- Sessions
-local session_dir = "~/.vim/sessions"
-local dirname = vim.api.nvim_command_output("echo substitute(getcwd(), '^.*/', '', '')")
-map("n", "<leader>ll", ":mks! " .. session_dir .. "/" .. dirname .. ".vim", { noremap = true, silent = false })
-map("n", "<leader>ls", ":so " .. session_dir .. "/", { noremap = true, silent = false })

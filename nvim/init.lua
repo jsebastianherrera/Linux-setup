@@ -1,5 +1,5 @@
 --IMPORTS
 require("plug")
 require("opts")
-require("cmp-config")
+require("coc")
 require("mapping")
