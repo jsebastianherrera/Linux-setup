@@ -1,0 +1,12 @@
+#!/bin/bash
+status=$(systemctl status docker | grep active | awk '{print $2}')
+if [[ $status = 'inactive' || $status = 'failed' ]]; then
+	echo "_"
+else
+	active_containers=$(docker ps -q | wc -l)
+	if [ "${active_containers}" -gt 0 ]; then
+		echo "${active_containers}"
+  else 
+    echo "0"
+	fi
+fi

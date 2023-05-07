@@ -1,0 +1,9 @@
+#!/bin/bash
+lines=$( ip addr show | grep -c 'tun0'  )
+if [ "$lines" -gt 0 ]; then
+	tun=$( ip addr show | grep tun0 | tail -n 1 | awk '{print $2}')
+	echo "${tun}"
+else
+  echo "disconnected"
+
+fi
