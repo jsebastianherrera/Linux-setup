@@ -9,6 +9,7 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
+#########################################################################3
 #Check if the script is running as root user
 function isRoot(){
   id=$(id -u)
@@ -19,15 +20,19 @@ function isRoot(){
   fi
 }
 
+#########################################################################3
 # Check is the current distro is fedora or not 
 function isFedora() {
-  if [[ $(uname -n) = 'fedora' ]]; then 
+  local distro
+  distro=$(cat /etc/os-release | grep -e "^ID=" | sed 's/ID=//g')
+  if [[ "${distro}" = 'fedora' ]]; then 
     return 0
   else 
     return 1
   fi
 }
 
+#########################################################################3
 function logo(){
   echo "         .--.            "
   echo "        |o_o |           "
@@ -41,11 +46,27 @@ function logo(){
   sleep 0.5
   echo
 }
+#########################################################################3
+function setConfig(){
+  # Create .config folder if is not created 
+  mkdir -p ~/.config/
+  echo -e "${blueColour}Backup folder ~/backup/ ${endColour}"
+  # Backup 
+  mkdir -p ~/backup 
+  mv alacritty bspwm nvim rofi starship.toml ~/backup
+  cp .zshrc ~/.zshrc
+  # Copying config files 
+  cp -r alacritty bspwm nvim rofi starship.toml ~/.config/
+  
+}
+#########################################################################3
 function setZsh(){
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
+
+#########################################################################3
 function main(){
-  local packages=( bspwm picom rofi polybar bluetoothctl brightnessctl amixer scrot alacritty git zsh )
+  local packages=( bspwm picom rofi polybar bluetoothctl brightnessctl amixer scrot alacritty git zsh snapd )
   local missingPackages=()
   if isFedora; then 
     clear
@@ -79,7 +100,7 @@ function main(){
     exit 1
   fi
 }
-
+#########################################################################3
 if isRoot; then
   main 
 else 
