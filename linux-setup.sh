@@ -53,10 +53,10 @@ function setConfig(){
   echo -e "${blueColour}Backup folder ~/backup/ ${endColour}"
   # Backup 
   mkdir -p ~/backup 
-  mv alacritty bspwm nvim rofi starship.toml ~/backup
-  cp .zshrc ~/.zshrc
+  # mv alacritty bspwm nvim rofi starship.toml ~/backup
+  cp ./.zshrc ~/.zshrc
   # Copying config files 
-  cp -r alacritty bspwm nvim rofi starship.toml ~/.config/
+  cp -r ./alacritty ./bspwm ./nvim ./rofi ./starship.toml ~/.config/
   
 }
 #########################################################################3
@@ -66,7 +66,7 @@ function setZsh(){
 
 #########################################################################3
 function main(){
-  local packages=( bspwm picom rofi polybar bluetoothctl brightnessctl amixer scrot alacritty git zsh snapd )
+  local packages=( bspwm picom rofi polybar sxhkd nvim bluetoothctl brightnessctl amixer scrot alacritty git zsh snapd neovim feh lsd zathura )
   local missingPackages=()
   if isFedora; then 
     clear
@@ -91,8 +91,6 @@ function main(){
         for i in  "${missingPackages[@]}";do
           dnf install "${i}" -y 
         done
-        # Calling zsh function
-        setZsh
       fi
     fi
   else
@@ -101,8 +99,10 @@ function main(){
   fi
 }
 #########################################################################3
-if isRoot; then
+# if isRoot; then
   main 
-else 
-  echo -e "${redColour}U need to run the script as root${endColour}"
-fi
+  # Calling zsh function
+  setZsh
+# else 
+  # echo -e "${redColour}U need to run the script as root${endColour}"
+# fi
