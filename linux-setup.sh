@@ -59,6 +59,9 @@ function setConfig(){
   cp -r ./alacritty ./bspwm ./nvim ./rofi ./starship.toml ~/.config/
   mkdir -p ~/Pictures
   cp ./fedora.png ~/Pictures
+  mkdir -p ~/.local/share/fonts
+  unzip ./fonts.zip -d ~/.local/share/fonts 
+  sudo fc-cache -f -v ~/.local/share/fonts
   
 }
 #########################################################################3
@@ -68,7 +71,7 @@ function setZsh(){
 
 #########################################################################3
 function main(){
-  local packages=( bspwm picom rofi polybar sxhkd nvim bluetoothctl brightnessctl amixer scrot alacritty git zsh snapd neovim feh lsd zathura )
+  local packages=( bspwm picom rofi polybar sxhkd nvim bluetoothctl brightnessctl amixer scrot alacritty git zsh snapd neovim feh lsd zathura zip unzip )
   local missingPackages=()
   if isFedora; then 
     clear
