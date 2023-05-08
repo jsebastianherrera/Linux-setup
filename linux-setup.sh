@@ -28,7 +28,7 @@ function isFedora() {
   if [[ "${distro}" = 'fedora' ]]; then 
     return 0
   else 
-    return 1
+    return 0
   fi
 }
 
@@ -86,10 +86,10 @@ function main(){
       read -r -n 1 confirmation
       echo
       if [[ "${confirmation}" = "y" ]]; then
-        dnf update -y 
-        dnf upgrade -y
+        sudo apt update -y 
+        sudo apt upgrade -y
         for i in  "${missingPackages[@]}";do
-          dnf install "${i}" -y 
+          sudo apt install "${i}" -y 
         done
       fi
     fi
@@ -99,10 +99,12 @@ function main(){
   fi
 }
 #########################################################################3
-# if isRoot; then
-  main 
+if isRoot; then
+  echo -e "${redColour}U do not need to run the script as root${endColour}"
+else 
   # Calling zsh function
+  main 
+  setConfig 
   setZsh
-# else 
-  # echo -e "${redColour}U need to run the script as root${endColour}"
-# fi
+  reboot
+fi
