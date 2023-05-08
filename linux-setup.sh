@@ -57,6 +57,8 @@ function setConfig(){
   cp ./.zshrc ~/.zshrc
   # Copying config files 
   cp -r ./alacritty ./bspwm ./nvim ./rofi ./starship.toml ~/.config/
+  mkdir -p ~/Pictures
+  cp ./fedora.png ~/Pictures
   
 }
 #########################################################################3
